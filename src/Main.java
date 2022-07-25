@@ -146,7 +146,7 @@ public class Main {
             System.out.printf(chuc + donVi2);
 
         }
-        if (number > 100) {
+        if (number > 100 && number < 1000) {
             String tram3 = "";
 
             switch (number / 100) {
@@ -182,100 +182,105 @@ public class Main {
             String chuc3 = "";
             String donVi3 = "";
 
-            switch (number2 / 10) {
-                case 1:
-                    switch (number2 %10){
-                        case 0:
-                            chuc3 = "ten";
-                            break;
-                        case 1:
-                            chuc3 = "eleven";
-                            break;
-                        case 2:
-                            chuc3 = "twelve";
-                            break;
-                        case 3:
-                            chuc3 = "thirteen";
-                            break;
-                        case 4:
-                            chuc3 = "forteen";
-                            break;
-                        case 5:
-                            chuc3 = "fifteen";
-                            break;
-                        case 6:
-                            chuc3 = "sixteen";
-                            break;
-                        case 7:
-                            chuc3 = "seventeen";
-                            break;
-                        case 8:
-                            chuc3 = "eighteen";
-                            break;
-                        case 9:
-                            chuc3 = "nineteen";
-                            break;
+            if (number2 / 10 == 1) {
+                switch (number2 % 10) {
+                    case 0:
+                        chuc3 = "ten";
+                        break;
+                    case 1:
+                        chuc3 = "eleven";
+                        break;
+                    case 2:
+                        chuc3 = "twelve";
+                        break;
+                    case 3:
+                        chuc3 = "thirteen";
+                        break;
+                    case 4:
+                        chuc3 = "forteen";
+                        break;
+                    case 5:
+                        chuc3 = "fifteen";
+                        break;
+                    case 6:
+                        chuc3 = "sixteen";
+                        break;
+                    case 7:
+                        chuc3 = "seventeen";
+                        break;
+                    case 8:
+                        chuc3 = "eighteen";
+                        break;
+                    case 9:
+                        chuc3 = "nineteen";
+                        break;
 
-                    }
-                    break;
-                case 2:
-                    chuc3 = "twenty";
-                    break;
-                case 3:
-                    chuc3 = "thirty";
-                    break;
-                case 4:
-                    chuc3 = "forty";
-                    break;
-                case 5:
-                    chuc3 = "fifty";
-                    break;
-                case 6:
-                    chuc3 = "sixty";
-                    break;
-                case 7:
-                    chuc3 = "seventy";
-                    break;
-                case 8:
-                    chuc3 = "eighty";
-                    break;
-                case 9:
-                    chuc3 = "ninety";
-                    break;
+                }
+                System.out.println(tram3 + " " + chuc3);
+            } else {
+                switch (number2 / 10) {
+                    case 2:
+                        chuc3 = "twenty";
+                        break;
+                    case 3:
+                        chuc3 = "thirty";
+                        break;
+                    case 4:
+                        chuc3 = "forty";
+                        break;
+                    case 5:
+                        chuc3 = "fifty";
+                        break;
+                    case 6:
+                        chuc3 = "sixty";
+                        break;
+                    case 7:
+                        chuc3 = "seventy";
+                        break;
+                    case 8:
+                        chuc3 = "eighty";
+                        break;
+                    case 9:
+                        chuc3 = "ninety";
+                        break;
 
+                }
+                switch (number2 % 10) {
+                    case 1:
+                        donVi3 = "one";
+                        break;
+                    case 2:
+                        donVi3 = "two";
+                        break;
+                    case 3:
+                        donVi3 = "three";
+                        break;
+                    case 4:
+                        donVi3 = "four";
+                        break;
+                    case 5:
+                        donVi3 = "five";
+                        break;
+                    case 6:
+                        donVi3 = "six";
+                        break;
+                    case 7:
+                        donVi3 = "seven";
+                        break;
+                    case 8:
+                        donVi3 = "eight";
+                        break;
+                    case 9:
+                        donVi3 = "nice";
+                        break;
+                }
+
+                System.out.println(tram3 + " " + chuc3 + " " + donVi3);
             }
-            switch (number2 % 10) {
-                case 1:
-                    donVi3 = "one";
-                    break;
-                case 2:
-                    donVi3 = "two";
-                    break;
-                case 3:
-                    donVi3 = "three";
-                    break;
-                case 4:
-                    donVi3 = "four";
-                    break;
-                case 5:
-                    donVi3 = "five";
-                    break;
-                case 6:
-                    donVi3 = "six";
-                    break;
-                case 7:
-                    donVi3 = "seven";
-                    break;
-                case 8:
-                    donVi3 = "eight";
-                    break;
-                case 9:
-                    donVi3 = "nice";
-                    break;
-            }
 
-            System.out.println(tram3 + " " + chuc3 + " " +donVi3 );
-
+        }
+        if (number < 0 || number >= 1000) {
+            System.out.println("Không dịch các số này ");
         }
     }
 
